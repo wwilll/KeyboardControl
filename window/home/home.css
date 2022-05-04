@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  color: white;
+  overflow: hidden;
+}
+
+#app header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  width: 100%;
+  height: 30px;
+  -webkit-app-region: drag;
+  user-select: none;
+  -webkit-user-select: none;
+  border-radius: 15px 15px 0 0;
+}
+
+#app header span {
+  -webkit-app-region: no-drag;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  width: 30px;
+  height: 30px;
+}
+
+/** 元素drag后，hover等无效 */
+#app header:hover {
+  background: rgba(13 107 247, 0.5);
+}
+
+h1 {
+  margin: 0 0 30px 0;
+  width: 100%;
+  text-align: center;
+}
+p {
+  text-align: center;
+}
