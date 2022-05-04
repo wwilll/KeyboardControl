@@ -13,13 +13,23 @@ yarn run start（或F5调试）
 yarn run make // 打包
 ```
 
-- 安装 electron（注意）
+在局域网内使用下方 api 调用键盘
+http://${host}:3009/api/invoke?key=f11
 
-```js
-$ npm install --save-dev electron //可能会卡住（https://blog.xenori.com/2019/12/fix-npm-hang-when-install-electron/）
-// 尝试 nrm切淘宝镜像，然后对electron单独设置
-npm config set electron_mirror "https://npm.taobao.org/mirrors/electron/" // 一般此句执行就好了
-```
+key 参考 http://robotjs.io/docs/syntax#keys
+
+## 注意
+
+- 打包
+  由于使用 electron-forge 打包， 生成的 exe 双击后默认安装在 C 盘
+  `C:\Users\[当前用户]\AppData\Local\keyboardcontrol`，可将该 exe 发送到桌面快捷方式
+
+- 安装 electron（注意）
+  ```js
+  $ npm install --save-dev electron //可能会卡住（https://blog.xenori.com/2019/12/fix-npm-hang-when-install-electron/）
+  // 尝试 nrm切淘宝镜像，然后对electron单独设置
+  npm config set electron_mirror "https://npm.taobao.org/mirrors/electron/" // 一般此句执行就好了
+  ```
 
 ## 目的
 
